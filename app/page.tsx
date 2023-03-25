@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-
-=======
 import {Poppins} from '@next/font/google'
 
 const poppins = Poppins({
 	subsets: ['latin'],
 	weight: ['400', '500', '600', '700'],
 })
->>>>>>> a7b8dc1ac23517e6337e33d5ac4ef06ec662ce33
 
 export default function Home() {
 	return (

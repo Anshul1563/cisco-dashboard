@@ -59,7 +59,7 @@ function Dashboard() {
 					setUnit(BU);
 					setFamily("");
 					setPlid("");
-					setPlids([])
+					
 				}}
 				className={
 					"border-2 border-blue-500 py-2 rounded-sm px-6 cursor-pointer " +
