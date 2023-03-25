@@ -9,7 +9,19 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "cisco-purple":"#5267df",
+        "cisco-red":"#fa5959",
+        "cisco-blue":"#242a45",
+        "cisco-grey":"#9194a2",
+        "cisco-white":"#f7f7f7",
+    },
   },
-  plugins: [],
+    fontFamily: {
+      Poppins: ["Poppins", "sans-serif"],
+  },
+  
+  }
+  
 }
