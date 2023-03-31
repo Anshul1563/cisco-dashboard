@@ -1,0 +1,29 @@
+// schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:$hashcode123@db.nlbhilmujnbugxfdoczo.supabase.co:5432/postgres"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  PLID              String     @default(cuid()) @id
+  productFamily     String
+  businessUnit      String
+  predictedDemand   Int[]
+  storage           Storage @relation(fields: [storageID], references: [ID])
+  storageID         String
+
+}
+
+model Storage {
+  ID                  String       @default(cuid()) @id
+  products            Product[]
+  StorageType         String
+  StorageCapacity     Int
+  StorageCost         Int
+  RemainingCapacity   Int
+  Quarter             Int
+}

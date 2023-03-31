@@ -12,7 +12,13 @@ const MyResponsiveLine = ({ data }) => (
 		data={data}
 		curve="monotoneX"
 		margin={{ top: 50, right: 150, bottom: 100, left: 150 }}
-		xScale={{ type: "point" }}
+		xScale={{
+			type: "time",
+			format: "%d-%m-%Y",
+			// useUTC: false,
+			// precision: "day",
+		}}
+		xFormat="time:%d-%m-%Y"
 		yScale={{
 			type: "linear",
 			min: "auto",
@@ -24,13 +30,14 @@ const MyResponsiveLine = ({ data }) => (
 		axisTop={null}
 		axisRight={null}
 		axisBottom={{
-			orient: "bottom",
+			tickValues: "every 1 month",
 			tickSize: 5,
 			tickPadding: 5,
 			tickRotation: 0,
+			format: "%d-%m-%Y",
+			legend: "Date",
 			legendOffset: 80,
 			legendPosition: "middle",
-			legend: "Booking Date",
 			tickRotation: 90,
 		}}
 		axisLeft={{
